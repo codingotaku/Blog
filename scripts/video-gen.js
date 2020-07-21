@@ -52,14 +52,18 @@ export class VidGen {
     generateCard(video, columns) {
         const column = this.createElement('div', ['column', 'is-4']);
         const card = this.createElement('article', ['box']);
-        const iframe = this.createElement('iframe', []);
+        const iframe = this.createElement('iframe', ['box']);
         const button = this.createElement('a', ['button', 'is-primary', 'is-outlined', 'is-4', 'column']);
         button.innerHTML = 'Download';
         button.href= 'https://lbry.tv/$/download/'+video.url;
         iframe.src = 'https://lbry.tv/$/embed/' + video.url;
         iframe.setAttribute('allowfullscreen', 'true')
-        iframe.width="560px"
-        iframe.height="315px"
+        iframe.width="100%"
+        iframe.onload= ()=>{
+            console.log(iframe.scrollWidth);
+            iframe.height=iframe.scrollWidth * 0.75 + 'px';
+        }
+        console.log(iframe)
         card.appendChild(iframe);
 
         const cardContent = this.createElement('div', ['card-content']);
