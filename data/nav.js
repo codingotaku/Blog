@@ -6,10 +6,10 @@ export const nav = [
   },
   {
     name:'About',
-    url:'#',
+    url:'/pages/about',
   },
   {
     name:'Contact',
-    url:'https://codingotaku.com/#contact',
+    url:'/pages/contact',
   }
 ];
