@@ -49,7 +49,7 @@ export const allVideos = [
         }]
     }, {
         type: 'Reviews',
-        desc: 'Me reviewing softwares so that you don\'t have to try them out.',
+        desc: 'Me reviewing software so that you don\'t have to try them out.',
         videos: [{
             title: 'Password Manager Review',
             url: 'password-manager-review/c58ca141daa9072966e525e8ebede0423b62c466'
