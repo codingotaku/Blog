@@ -11,5 +11,9 @@ export const nav = [
   {
     name:'Contact',
     url:'/pages/contact',
+  },
+  {
+    name:'Donate',
+    url:'/pages/donate',
   }
 ];
