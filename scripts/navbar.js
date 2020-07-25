@@ -2,7 +2,7 @@ const navbar = document.getElementById('navbar');
 const link = document.createElement('a');
 link.classList.add('navbar-item');
 
-import {nav} from '/data/nav.js';
+import { nav } from '/data/nav.js';
 
 nav.forEach((item, i) => {
   const navItem = link.cloneNode();
@@ -11,7 +11,30 @@ nav.forEach((item, i) => {
   if (item.isNewTab) {
     navItem.target = '_blank';
   }
-  navbar.appendChild(navItem);
+  if (item.isDropdown) {
+    const dropdownContainer = document.createElement('div');
+    dropdownContainer.classList.add('navbar-item');
+    dropdownContainer.classList.add('has-dropdown');
+    dropdownContainer.classList.add('is-hoverable');
+    dropdownContainer.appendChild(navItem);
+    navItem.classList.add('navbar-link');
+
+    const dropdown = document.createElement('div');
+    dropdown.classList.add('navbar-dropdown');
+    item.items.forEach((subItem) => {
+      const navSubItem = link.cloneNode();
+      navSubItem.href = subItem.url;
+      navSubItem.innerHTML = subItem.name;
+      if (subItem.isNewTab) {
+        navSubItem.target = '_blank';
+      }
+      dropdown.appendChild(navSubItem);
+    });
+    dropdownContainer.appendChild(dropdown);
+    navbar.appendChild(dropdownContainer);
+  } else {
+    navbar.appendChild(navItem);
+  }
 });
 
 // <a class="navbar-item" target="_blank" href="https://Coding Otaku.com">
@@ -29,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Check if there are any navbar burgers
   if ($navbarBurgers.length > 0) {
     // Add a click event on each of them
-    $navbarBurgers.forEach( el => {
+    $navbarBurgers.forEach(el => {
       el.addEventListener('click', () => {
         // Get the target from the "data-target" attribute
         const target = el.dataset.target;

@@ -10,12 +10,12 @@ export const mainBlogs = [{
       subtitle:'And what you can do against it.',
       image:'/images/non-free-school/non-free-school.png'
     },
-    // {
-    //   path:'/pages/migrating-to-floss/',
-    //   title:'Migrating To FLOSS!',
-    //   subtitle:'A few alternatives to the privacy hogging softwares you use.',
-    //   image:'/images/migrating-to-floss/migrating-to-floss.png'
-    // },
+    {
+      path:'/pages/migrating-to-floss/',
+      title:'Migrating To FLOSS!',
+      subtitle:'A few alternatives to the privacy hogging softwares you use.',
+      image:'/images/migrating-to-floss/migrating-to-floss.png'
+    },
   ];
 
 export const allBlogs = [];
