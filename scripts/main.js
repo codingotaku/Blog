@@ -31,8 +31,8 @@ function generateCard(blog, columns) {
 
   const cardContent = createElement('div', ['card-content']);
   const content = createElement('div', ['content']);
-  const title = createElement('span', []);
-  const subtitle = createElement('span', []);
+  const title = createElement('span', ['subtitle']);
+  const subtitle = createElement('span', ['subtitle', 'is-6']);
 
   title.innerHTML = blog.title;
   subtitle.innerHTML = blog.subtitle;
