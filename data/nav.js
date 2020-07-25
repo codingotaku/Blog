@@ -17,13 +17,14 @@ export const nav = [
     isNewTab: true
   },
   {
-    name: 'About',
-    url: '/pages/about',
-  }, {
     name: 'Videos',
     url: '/pages/videos',
     isDropdown: true,
     items: videoMenu
+  },
+  {
+    name: 'About',
+    url: '/pages/about',
   },
   {
     name: 'Contact',
