@@ -57,7 +57,34 @@
         </div>
     </section><br>
     <section>
-        <div class="container is-fluid" id="card-holder" />
+        <div class="container">
+            <div class="hero box container">
+                <div>
+                    <img src="" alt="banner" id="banner">
+                </div>
+                <div class="media">
+                    <figure class="media-left">
+                        <p class="image is-128x128">
+                            <img id="thumbnail" alt="thumbnail">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div >
+                            <h1 class="title" id="name"></h1>
+                            <h2 class="subtitle" id="description"></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <br><br>
+            <div id="list-holder">
+
+            </div>
+        </div>
     </section>
     <br><br>
     <footer class="footer">
@@ -71,10 +98,7 @@
             </p>
         </div>
     </footer>
-    <script type="module" charset="utf-8">
-        import { VidGen } from '/scripts/video-gen.js';
-        new VidGen().generateTypes();
-    </script>
+    <script src="/scripts/lbry.js" type="module" charset="utf-8"></script>
     <script src="/scripts/navbar.js" type="module" charset="utf-8"></script>
 </body>
 
