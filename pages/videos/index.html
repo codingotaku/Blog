@@ -48,42 +48,51 @@
     <section>
         <div class="container">
             <div class="box notification is-success">
-                Some of my videos can be found here.
-                All the videos are at LBRY, you also have a <strong>download</strong> option for each
-                video.<br>
+                Some of my videos can be found here. all of it is fetched using LBRY REST api,
+                Clicking on the video will open a new tab to <a href="https://lbry.tv" class="has-text-link">lbry.tv</a>
+                for the video.
+                You also have a <strong>download</strong> option for each video to get the DRM free mp4 file, it is also
+                fetched from the same <a href="https://lbry.tv" class="has-text-link">lbry.tv</a> client but doesn't mae
+                you browse the site<br>
+            </div>
+            <div class="box notification is-danger">
+                The reason for me not embedding the video is because LBRY doesn't have any analytic-free embedding
+                system yet (you can still browse it without analytics if you have an LBRY account). And it goes against
+                my morals.
             </div>
         </div>
-    </section><br>
+    </section><br><br>
     <section>
         <div class="container">
-            <div class="hero box container">
-                <div>
-                    <img src="" alt="banner" id="banner">
-                </div>
-                <div class="media">
-                    <figure class="media-left">
-                        <p class="image is-128x128">
-                            <img id="thumbnail" alt="thumbnail">
-                        </p>
-                    </figure>
-                    <div class="media-content">
-                        <div >
-                            <h1 class="title" id="name"></h1>
-                            <h2 class="subtitle" id="description"></h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h2 class="title">Drawings</h2>
+            <div id="drawing-list-holder"></div>
+        </div>
+    </section><br><br>
+    <section>
+        <div class="container">
+            <h2 class="title">Privacy</h2>
+            <div id="privacy-list-holder"></div>
+        </div>
+    </section><br><br>
+    <section>
+        <div class="container">
+            <h2 class="title">Tutorials</h2>
+            <div id="tutorial-list-holder"></div>
+        </div>
+    </section><br><br>
+    <section>
+        <div class="container">
+            <h2 class="title">Game play</h2>
+            <div id="gameplay-list-holder"></div>
+        </div>
+    </section><br><br>
+    <section>
+        <div class="container">
+            <h2 class="title">Misc</h2>
+            <div id="misc-list-holder"></div>
         </div>
     </section>
-    <section>
-        <div class="container">
-            <br><br>
-            <div id="list-holder">
 
-            </div>
-        </div>
-    </section>
     <br><br>
     <footer class="footer">
         <div class="content has-text-centered">
