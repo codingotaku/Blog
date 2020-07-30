@@ -17,26 +17,26 @@ fetch('https://api.lbry.tv/api/v1/proxy', {
         const columns = createElement("div", ["columns"]);
         const items = res.result.items;
         let listHolder = {
-            drawing: [columns.cloneNode()],
-            privacy: [columns.cloneNode()],
-            tutorial: [columns.cloneNode()],
-            gameplay: [columns.cloneNode()],
+            // drawing: [columns.cloneNode()],
+            // privacy: [columns.cloneNode()],
+            // tutorial: [columns.cloneNode()],
+            // gameplay: [columns.cloneNode()],
             misc: [columns.cloneNode()]
         }
         items.forEach((item, i) => {
 
             let holder = listHolder['misc'];
-            console.log(item.value.tags);
-            for (let key of Object.keys(listHolder)) {
-                if (item.value.tags.includes(key)) {
-                 holder = listHolder[key];
-                }
-            }
+            // console.log(item.value.tags);
+            // for (let key of Object.keys(listHolder)) {
+            //     if (item.value.tags.includes(key)) {
+            //      holder = listHolder[key];
+            //     }
+            // }
             generateCard(item, holder);
         });
         for (let key of Object.keys(listHolder)) {
-            console.log(key);
-            let list = document.getElementById(key+"-list-holder");
+            // let list = document.getElementById(key+"-list-holder");
+            let list = document.getElementById("misc-list-holder");
             for(let column of listHolder[key] ) {
                 list.append(column);
             }
