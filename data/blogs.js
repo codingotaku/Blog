@@ -8,7 +8,7 @@ export const mainBlogs = [{
   path: '/pages/non-free-school/',
   title: 'Use of Non-Free Software in School',
   subtitle: 'And what you can do against it.',
-  image: '/images/non-free-school/non-free-school.png'
+  image: '/images/non-free-school/non-free-school.jpg'
 },
 {
   path: '/pages/why-do-i-say-gnu-linux',
@@ -20,7 +20,7 @@ export const mainBlogs = [{
   path: '/pages/migrating-to-floss/',
   title: 'Migrating To FLOSS!',
   subtitle: 'A few alternatives to the privacy hogging softwares you use.',
-  image: '/images/migrating-to-floss/migrating-to-floss.png'
+  image: '/images/migrating-to-floss/migrating-to-floss.jpg'
 }
 ];
 
