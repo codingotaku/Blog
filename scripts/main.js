@@ -1,13 +1,13 @@
-import {mainBlogs} from '/data/blogs.js'
+import { mainBlogs } from '/data/blogs.js'
 
 function generateBlogs() {
   const cardHolder = document.getElementById('card-holder');
-  let columns = createElement('div', ['columns']);
+  let columns = createElement('div', ['columns', 'is-centered']);
   mainBlogs.forEach((blog, i) => {
     console.log(i);
-    if (i% 3 === 0) {
+    if (i % 3 === 0) {
       cardHolder.appendChild(columns);
-      columns = createElement('div', ['columns']);
+      columns = createElement('div', ['columns', 'is-centered']);
     }
     generateCard(blog, columns);
   });
@@ -15,15 +15,15 @@ function generateBlogs() {
 }
 
 function generateCard(blog, columns) {
-  const column = createElement('div', ['column','is-3']);
-  const card = createElement('a', ['card','box']);
+  const column = createElement('div', ['column', 'is-3']);
+  const card = createElement('a', ['card', 'box']);
   card.href = blog.path;
 
   const cardImage = createElement('div', ['card-image']);
-  const figure = createElement('div', ['image','is-2by1']);
-  const img = createElement('img',[]);
+  const figure = createElement('div', ['image', 'is-2by1']);
+  const img = createElement('img', []);
 
-  img.src =blog.image;
+  img.src = blog.image;
 
   figure.appendChild(img);
   cardImage.appendChild(figure);
@@ -37,7 +37,7 @@ function generateCard(blog, columns) {
   title.innerHTML = blog.title;
   subtitle.innerHTML = blog.subtitle;
   content.appendChild(title);
-  content.appendChild(createElement('br',[]));
+  content.appendChild(createElement('br', []));
   content.appendChild(subtitle);
 
   cardContent.appendChild(content);
