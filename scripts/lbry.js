@@ -14,7 +14,7 @@ fetch('https://api.lbry.tv/api/v1/proxy', {
         },
         body: JSON.stringify({ "method": "claim_search", "params": { "channel_ids": [result.claim_id], "page": 1, "page_size": 100 } })
     }).then(res => res.json()).then(res => {
-        const columns = createElement("div", ["columns"]);
+        const columns = createElement("div", ["columns", "is-centered"]);
         const items = res.result.items;
         let listHolder = {
             // drawing: [columns.cloneNode()],
@@ -37,7 +37,7 @@ fetch('https://api.lbry.tv/api/v1/proxy', {
         for (let key of Object.keys(listHolder)) {
             // let list = document.getElementById(key+"-list-holder");
             let list = document.getElementById("misc-list-holder");
-            for(let column of listHolder[key] ) {
+            for (let column of listHolder[key]) {
                 list.append(column);
             }
         }
@@ -45,15 +45,15 @@ fetch('https://api.lbry.tv/api/v1/proxy', {
 });
 
 function generateCard(item, listHolder) {
-    if (listHolder[listHolder.length-1].children.length >= 4) {
-        let columns = createElement("div", ["columns"]);
+    if (listHolder[listHolder.length - 1].children.length >= 3) {
+        let columns = createElement("div", ["columns", "is-centered"]);
         listHolder.push(columns);
     }
-    let columns = listHolder[listHolder.length-1];
-    const mediaContainer = createElement("a", ["box", "column", "is-3"]);;
+    let columns = listHolder[listHolder.length - 1];
+    const mediaContainer = createElement("a", ["box", "column", "is-4"]);;
     const data = createElement("p", []);
     const img = createElement("img", []);
-    img.alt = item.name + "thumbnail";
+    img.alt = item.name + " thumbnail";
     img.src = item.value.thumbnail.url;
     img.style.width = "100%";
     data.appendChild(img);
@@ -61,10 +61,15 @@ function generateCard(item, listHolder) {
     const mediaContent = createElement("div", []);
     const title = createElement("p", ["subtitle"]);
     title.innerHTML = item.value.title;
-    mediaContent.appendChild(title);
+    const download = createElement("a", ["button", "is-primary", "is-outlined"]);
+    download.innerHTML = "Download";
+    download.href = item.permanent_url.replace("lbry://", "https://lbry.tv/$/download/").replace(/#/g, "/");
+
+    mediaContent.appendChild(title)
+    mediaContent.appendChild(download);
     data.appendChild(mediaContent);
     mediaContainer.appendChild(data);
-    mediaContainer.href = item.permanent_url.replace("lbry://", "https://lbry.tv/");
+    mediaContainer.href = item.canonical_url.replace("lbry://", "https://lbry.tv/").replace(/#/g, ":");
     mediaContainer.target = "_blank";
     columns.appendChild(mediaContainer);
 }
