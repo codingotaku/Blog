@@ -51,23 +51,27 @@ function generateCard(item, listHolder) {
     }
     let columns = listHolder[listHolder.length - 1];
     const mediaContainer = createElement("a", ["box", "column", "is-4"]);;
-    const data = createElement("p", []);
-    const img = createElement("img", []);
+    const data = createElement("div", []);
+    const img = createElement("img", ['box']);
     img.alt = item.name + " thumbnail";
     img.src = item.value.thumbnail.url;
     img.style.width = "100%";
     data.appendChild(img);
 
-    const mediaContent = createElement("div", []);
-    const title = createElement("p", ["subtitle"]);
+    const mediaContent = createElement("div", ['columns']);
+    const duration = createElement('span', ['column', 'is-2'])
+    const title = createElement("span", ["subtitle", 'column']);
+    duration.innerHTML = (new Date(item.value.video.duration * 1000)).toUTCString().match(/(\d\d:\d\d:\d\d)/)[0]
     title.innerHTML = item.value.title;
-    const download = createElement("a", ["button", "is-primary", "is-outlined"]);
+    const download = createElement("a", ["button", 'box', "is-primary", "is-outlined"]);
     download.innerHTML = "Download";
     download.href = item.permanent_url.replace("lbry://", "https://lbry.tv/$/download/").replace(/#/g, "/");
 
+    mediaContent.appendChild(duration)
     mediaContent.appendChild(title)
-    mediaContent.appendChild(download);
     data.appendChild(mediaContent);
+    data.appendChild(download)
+
     mediaContainer.appendChild(data);
     mediaContainer.href = item.canonical_url.replace("lbry://", "https://lbry.tv/").replace(/#/g, ":");
     mediaContainer.target = "_blank";
