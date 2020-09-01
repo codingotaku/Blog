@@ -1,4 +1,11 @@
-export const mainBlogs = [{
+export const mainBlogs = [
+  {
+    path:'/pages/why-do-i-not-use-analytics',
+    title:'Why Do I Not Use Analytics?',
+    subtitle:'Not for the reason you are thinking of.',
+    image: '/images/why-do-i-not-use-analytics/no-analytics.jpg'
+  },
+  {
   path: '/pages/india-chinese-app-ban/',
   title: 'India Banned Chinese Apps',
   subtitle: 'But is that enough?',

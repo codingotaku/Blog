@@ -48,7 +48,9 @@ function generateCard(blog, columns) {
 
 function createElement(element, classes) {
   let tmpElement = document.createElement(element);
-  tmpElement.classList.add(...classes);
+  if (classes.length) {
+    tmpElement.classList.add(...classes);
+  }
   return tmpElement;
 }
 generateBlogs();
