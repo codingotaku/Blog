@@ -7,6 +7,13 @@
     <link rel="icon" type="image/png" href="/icons/logo-with-bg.png">
     <title>Contact</title>
     <link rel="stylesheet" href="/styles/bulma.min.css">
+    <style>
+        a:is(.column) {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 3em;
+        }
+    </style>
 </head>
 
 <body>
@@ -70,43 +77,45 @@
                 <h1 class="title  has-text-centered">You can also find me on</h1>
                 <h1 class="subtitle has-text-danger has-text-centered">↓</h1>
                 <br />
-                <div class="columns">
-                    <a class="column tile" href="https://gitlab.com/codingotaku" target="_blank">
-                        <div class="image is-64x64">
-                            <img src="/icons/gitlab.svg" alt="GitLab Icon" />
-                        </div>&nbsp;GitLab
-                    </a>
-                    <a class="column tile" href="https://github.com/codingotaku" target="_blank">
-                        <div class="image is-64x64">
-                            <img src="/icons/github.svg" alt="GitHub Icon" />
-                        </div>&nbsp;GitHub
-                    </a>
-                    <a class="column tile" href="https://fosstodon.org/@CodingOtaku" target="_blank">
-                        <div class="image is-64x64">
-                            <img src="/icons/mastodon.svg" alt="Mastodon Icon" />
-                        </div>&nbsp;Mastodon
-                    </a>
-                    <a class="column tile" href="https://www.minds.com/CodingOtaku" target="_blank">
-                        <div class="image is-32x32">
-                            <img src="/icons/minds.svg" alt="Minds Icon" />
-                        </div><br>&nbsp;Minds
-                    </a>
-                    <a class="column tile" href="https://beta.lbry.tv/@codingotaku" target="_blank">
-                        <div class="image is-64x64">
-                            <img src="/icons/lbry.svg" alt="LBRY Icon" />
-                        </div>&nbsp;LBRY
-                    </a>
-                </div><br><br>
                 <div class="columns is-centered">
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="https://www.fsf.org/fb" class="image is-128x128" target="_blank">
-                                <img src="/icons/not-fd.svg" alt="Not f'd — you won't find me on Facebook">
-                            </a>
-                        </div>
-                        Copy&nbsp;<a href=/icons/not-fd.svg class="has-text-link" target="_blank">this button</a>&nbsp;
-                        to express your rejection of Facebook.
-                    </div>
+                    <a class="column box is-2" href="https://gitlab.com/codingotaku" target="_blank">
+                        <span class="image is-64x64">
+                            <img src="/icons/gitlab.svg" alt="GitLab Icon" />
+                            GitLab
+                        </span>
+                    </a>
+                    <a class="column box is-2" href="https://github.com/codingotaku" target="_blank">
+                        <span class="image is-64x64">
+                            <img src="/icons/github.svg" alt="GitHub Icon" />
+                            GitHub
+                        </span>
+                    </a>
+                    <a class="column box is-2" href="https://fosstodon.org/@CodingOtaku" target="_blank">
+                        <span class="image is-64x64">
+                            <img src="/icons/mastodon.svg" alt="Mastodon Icon" />
+                            Mastodon
+                        </span>
+                    </a>
+                    <a class="column box is-2" href="https://www.minds.com/CodingOtaku" target="_blank">
+                        <span class="image is-32x32">
+                            <img src="/icons/minds.svg" alt="Minds Icon" />
+                            Minds
+                        </span><br>
+                    </a>
+                    <a class="column box is-2" href="https://beta.lbry.tv/@codingotaku" target="_blank">
+                        <span class="image is-64x64">
+                            <img src="/icons/lbry.svg" alt="LBRY Icon" />
+                            LBRY
+                        </span>
+                    </a>
+
+                    <a href="https://www.fsf.org/fb" class="column box is-2 has-text-danger" target="_blank">
+                        <span class="image has-text-left">
+                            <img src="/icons/not-fd.svg" alt="Not f'd — you won't find me on Facebook">
+                            You won't find me on Facebook
+                        </span>
+                    </a>
+                    <span class="column"></span>
                 </div>
             </div>
         </div>
