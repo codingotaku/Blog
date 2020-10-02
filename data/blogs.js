@@ -1,5 +1,11 @@
 export const mainBlogs = [
   {
+    path:'pages/cobra-effect-on-hactoberfest',
+    title:'Cobra Effect on Hactoberfest',
+    subtitle:'What went wrong?',
+    image:'/images/cobra-effect-on-hactoberfest/banner.jpg'
+  },
+  {
     path:'/pages/free-unix',
     title:'Free Unix!',
     subtitle:'New Unix implementation.',
