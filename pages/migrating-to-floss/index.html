@@ -7,6 +7,51 @@
     <link rel="icon" type="image/png" href="/icons/logo-with-bg.svg">
     <title>Migrating to FLOSS</title>
     <link rel="stylesheet" href="/styles/bulma.min.css">
+    <style>
+        @media screen and (max-width: 1024px) {
+
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr {
+                border: 1px solid #999;
+                margin-bottom: 1em;
+            }
+
+            td {
+                border: none !important;
+                position: relative;
+            }
+
+            td {
+                width: 100%;
+            }
+
+            tr:nth-child(odd) td:nth-of-type(1):before {
+                color: red;
+                content: "Avoid --> ";
+                font-weight: bold;
+            }
+
+            tr:nth-child(odd) td:nth-of-type(2):before {
+                color: green;
+                content: "Use ---->";
+                font-weight: bold;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -94,7 +139,7 @@
             </div>
             <br>
             <h1 class="title">Alternatives</h1>
-            <h2 class="subtitle">This is a long list, so I have optimized the page as much as I can for your
+            <h2 class="subtitle">This will soon become a long list, so I have tried to optimize this page as much as I can for your
                 convenience.</h2>
             <i class="has-text-danger subtitle">
                 And I strongly encorage you to click on the <b>Know More...</b> button to know our reason for choosing
@@ -144,10 +189,8 @@
                             </span>iOS
                         </td>
                         <td>
-                            <span style="display: none;"
-                                class="tag is-inline-mobile is-success has-text-centered">Use</span>
                             <a href="https://www.lineageos.org" target="_blank" class="has-text-success">LineageOS
-                                (Official Builds)</a><br>
+                                (Official Builds)</a>,
                             <a href="https://www.privacytools.io/operating-systems/#aosp_os" target="_blank"
                                 class="has-text-success">Other AOSP based operating system for
                                 Android</a>
@@ -233,7 +276,8 @@
                             Facebook
                         </td>
                         <td>
-                            <a href="https://diasporafoundation.org/" class="has-text-success" target="_blank">Diaspora</a>
+                            <a href="https://diasporafoundation.org/" class="has-text-success"
+                                target="_blank">Diaspora</a>
                         </td>
                         <td><button class="button" onclick="launch('social_mobile')">Know More...</button></td>
                     </tr>
