@@ -11,7 +11,7 @@ export const nav = [
   {
     name: 'Videos',
     url: 'https://videos.codingotaku.com',
-    isNewTab: true 
+    isNewTab: true
   },
   {
     name: 'About',
