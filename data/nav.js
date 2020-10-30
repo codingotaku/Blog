@@ -10,7 +10,8 @@ export const nav = [
   },
   {
     name: 'Videos',
-    url: '/pages/videos',
+    url: 'https://videos.codingotaku.com',
+    isNewTab: true 
   },
   {
     name: 'About',
