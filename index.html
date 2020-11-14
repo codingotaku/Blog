@@ -14,21 +14,26 @@
 
 <body>
   <section class="section">
-    <nav class="navbar is-dark is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-fixed-top is-spaced is-dark" role="navigation" aria-label="main navigation">
+      <input type="checkbox" id="menu-toggle" class="is-hidden">
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
           Home
         </a>
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-          data-target="navbar-Coding Otaku">
+        <label for="menu-toggle" class="navbar-burger burger">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a>
+        </label>
       </div>
-
-      <div id="navbar-Coding Otaku" class="navbar-menu">
-        <div class="navbar-end" id="navbar"></div>
+      <div id="navbar-coding-otaku" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="https://codingotaku.com" target="_blank">Website</a>
+          <a class="navbar-item" href="https://videos.codingotaku.com" target="_blank">Videos</a>
+          <a class="navbar-item" href="/About">About</a>
+          <a class="navbar-item" href="/pages/contact">Say Hello</a>
+          <a class="navbar-item" href="/pages/donate">Donate</a>
+        </div>
       </div>
     </nav>
     <noscript>
@@ -37,9 +42,11 @@
           Please enable JavaScript to navigate.
         </div>
         <div class="message-body">
-          This page is auto-generated and does <strong class=" has-text-white">not</strong> contain any form of telemetry or ads.<br>
-          JavaScript is required to navigate through header and to list blogs.<br>
-          Complete source code for this site can be found at <strong class=" has-text-white"><a href="https://github.com/CodingOtaku/Blog"
+          This page is auto-generated and does <strong class=" has-text-white">not</strong> contain any form of
+          telemetry or ads.<br>
+          Currntly, JavaScript is required to list blogs as it is fetched at runtime.<br>
+          Complete source code for this site can be found at <strong class=" has-text-white"><a
+              href="https://github.com/CodingOtaku/Blog"
               target="_blank">https://github.com/CodingOtaku/Blog</a></strong>.
         </div>
       </div>
@@ -59,15 +66,15 @@
   <br><br>
   <footer class="footer has-background-grey-dark has-text-white">
     <div class="content has-text-centered has-text-white">
-        <strong class="has-text-white">This blog is made by</strong> <a href="https://codingotaku.com">Coding Otaku</a>. The source code is
-        licensed
-        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+      <strong class="has-text-white">This blog is made by</strong> <a href="https://codingotaku.com">Coding Otaku</a>.
+      The source code is
+      licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
     </div>
     <a rel="me" href="https://fosstodon.org/@CodingOtaku"></a>
   </footer>
   <script src="/scripts/main.js" type="module" charset="utf-8"></script>
-  <script src="/scripts/navbar.js" type="module" charset="utf-8"></script>
 </body>
 
 </html>

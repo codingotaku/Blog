@@ -1,7 +1,62 @@
-html, body {
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
     background-color: #363636;
 }
 
+/* Mobile view customizations */
+@media screen and (max-width: 728px) {
+
+    .columns a {
+        width: 100% !important;
+    }
+}
+
+/* Tablet view customizations */
+@media screen and (max-width: 1023px) {
+
+    /* Remove the bulma workarounds (not required in mobile view) */
+    .columns a:hover {
+        transform: scale(1, 1);
+    }
+
+    .columns a {
+        width: 30%;
+    }
+
+    /* Bulma bug workaround remove end*/
+
+    /* show mavbar-menu on screen less than 1024px */
+    #menu-toggle:checked~#navbar-coding-otaku {
+        display: block;
+        background-color: #323232;
+        box-shadow: 5px 5px 8px #424242;
+    }
+
+    #menu-toggle:checked~#navbar-coding-otaku .navbar-end .navbar-item {
+        color: #ffffff;
+    }
+
+
+    #menu-toggle:checked~#navbar-coding-otaku .navbar-end .navbar-item:hover {
+        background-color: #262626;
+    }
+
+    /* make navbar-burger become cross on screen less than 1024px */
+    #menu-toggle:checked+.navbar-brand>label>span:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+    }
+
+    #menu-toggle:checked+.navbar-brand>label>span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked+.navbar-brand>label>span:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+}
 .item:hover {
     background-color: #222222;
 }
