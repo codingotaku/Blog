@@ -2,37 +2,31 @@ import { mainBlogs } from '/data/blogs.js'
 
 function generateBlogs() {
   const cardHolder = document.getElementById('card-holder');
-  let columns = createElement('div', ['columns', 'is-centered']);
-  mainBlogs.forEach((blog, i) => {
-    console.log(i);
-    if (i % 3 === 0) {
-      cardHolder.appendChild(columns);
-      columns = createElement('div', ['columns', 'is-centered']);
-    }
-    generateCard(blog, columns);
+  let rows = createElement('div', []);
+  mainBlogs.forEach((blog) => {
+    generateCard(blog, rows);
   });
-  cardHolder.appendChild(columns);
+  cardHolder.appendChild(rows);
 }
 
-function generateCard(blog, columns) {
-  const column = createElement('div', ['column', 'is-3']);
-  const card = createElement('a', ['card', 'box']);
-  card.href = blog.path;
+function generateCard(blog, rows) {
+  const row = createElement('div', ['is-flex', 'is-justify-content-center']);
+  const item = createElement('div', ['column', 'is-4', 'item']);
+  const article = createElement('a', ['media']);
+  article.href = blog.path;
 
-  const cardImage = createElement('div', ['card-image']);
-  const figure = createElement('div', ['image', 'is-2by1']);
+  const figure = createElement('figure', ['meida-left', 'mr-3']);
   const img = createElement('img', []);
-
+  img.width = '200'
   img.src = blog.image;
 
   figure.appendChild(img);
-  cardImage.appendChild(figure);
-  card.appendChild(cardImage);
+  article.appendChild(figure);
 
-  const cardContent = createElement('div', ['card-content']);
+  const mediaContent = createElement('div', ['media-content']);
   const content = createElement('div', ['content']);
-  const title = createElement('span', ['subtitle']);
-  const subtitle = createElement('span', ['subtitle', 'is-6']);
+  const title = createElement('span', ['subtitle' ,'has-text-link']);
+  const subtitle = createElement('span', ['subtitle', 'is-6', 'has-text-white']);
 
   title.innerHTML = blog.title;
   subtitle.innerHTML = blog.subtitle;
@@ -40,10 +34,11 @@ function generateCard(blog, columns) {
   content.appendChild(createElement('br', []));
   content.appendChild(subtitle);
 
-  cardContent.appendChild(content);
-  card.appendChild(cardContent);
-  column.appendChild(card);
-  columns.appendChild(column);
+  mediaContent.appendChild(content);
+  article.appendChild(mediaContent);
+  item.appendChild(article);
+  row.appendChild(item);
+  rows.appendChild(row);
 }
 
 function createElement(element, classes) {

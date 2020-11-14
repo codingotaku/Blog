@@ -7,16 +7,16 @@
     <link rel="icon" type="image/png" href="/icons/logo-with-bg.svg">
     <title>Donate</title>
     <link rel="stylesheet" href="/styles/bulma.min.css">
+    <link rel="stylesheet" href="/styles/main.css">
 </head>
 
 <body>
     <section class="section">
-        <nav class="navbar is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
+        <nav class="navbar is-dark is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="/">
-                    <img src="/icons/logo.png">
+                    Home
                 </a>
-
                 <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
                     data-target="navbar-Coding Otaku">
                     <span aria-hidden="true"></span>
@@ -26,7 +26,7 @@
             </div>
 
             <div id="navbar-Coding Otaku" class="navbar-menu">
-                <div class="navbar-start" id="navbar"></div>
+                <div class="navbar-end" id="navbar"></div>
             </div>
         </nav>
         <noscript>
@@ -35,55 +35,57 @@
                     Please enable JavaScript to navigate.
                 </div>
                 <div class="message-body">
-                    This page is auto-generated and does <strong>not</strong> contain any form of telemetry or ads.<br>
+                    This page is auto-generated and does <strong class=" has-text-white">not</strong> contain any form of telemetry or ads.<br>
                     JavaScript is required to navigate through header and to list blogs.<br>
-                    Complete source code for this site can be found at <strong><a
+                    Complete source code for this site can be found at <strong class=" has-text-white"><a
                             href="https://github.com/CodingOtaku/Blog"
                             target="_blank">https://github.com/CodingOtaku/Blog</a></strong>.
                 </div>
             </div>
         </noscript>
     </section>
-    <section class="hero  is-dark">
+    <section class="hero is-dark title-bg">
         <div class="hero-body">
-            <div class="container">
-                <h1 class="title">Donate</h1>
-                <h2 class="subtitle">Thank you for clicking donate!</h2>
-            </div>
-        </div>
-    </section><br><br>
-    <section>
-        <div class="container is-fluid">
-            Everything I do is free, but I will leave these here anyway <br /><br />
-            <div class="columnns">
-                Donate with liberapay <a class='colummn box is-2' href="https://liberapay.com/codingotaku/donate" target="_blank"
-                    class="text-white">
-                    <img alt="Donate using Liberapay" src="/icons/liberapay_donate.svg">
-                </a>
-                Donate with Paypal <a class="colummn box is-2" href="https://paypal.me/otakucoding" target="_blank">
-                    <img src="/icons/paypal_donate.gif" title="PayPal - The safer, easier way to pay online!"
-                        alt="Donate with PayPal button" />
-                </a>
-                Become a patreon <a class="colummn box is-2" href="https://www.patreon.com/bePatron?u=13678963" target="_blank">
-                    <svg width="15" height="15" viewBox="0 0 569 546">
-                        <g>
-                            <circle data-fill="1" id="Oval" cx="362" cy="204" r="204"></circle>
-                            <rect data-fill="2" id="Rectangle" x="0" y="0" width="100" height="545"></rect>
-                        </g>
-                    </svg> Patron
-                </a>
+            <div class="container has-text-centered is-dark">
+                <h1 class="title has-text-white">Everything I do is
+                    <a href="https://www.gnu.org/philosophy/free-sw.html" class="has-text-link" target="_blank">Free</a>
+                    and also
+                    <a href="https://en.wikipedia.org/wiki/Gratis_versus_libre" class="has-text-link"
+                        target="_blank">gratis</a>!</h1>
+                <h2 class="subtitle">But I will leave these here anyway.</h2>
             </div>
         </div>
     </section>
-    <footer class="footer">
-        <div class="content has-text-centered">
-            <p>
-                <strong>This blog is made by</strong> <a href="https://codingotaku.com">Coding Otaku</a>. The source
-                code is licensed
-                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-            </p>
+    <section class="container is-fluid">
+        <div class="columns is-centered">
+            <div class="column is-4"></div>
+            <a href="https://liberapay.com/codingotaku/donate" target="_blank" class="column is-1">
+                <img alt="Donate using Liberapay" src="/icons/liberapay_donate.svg">
+            </a>
+            <a href="https://paypal.me/otakucoding" target="_blank" class="column is-1">
+                <img src="/icons/paypal_donate.gif" title="PayPal - The safer, easier way to pay online!"
+                    alt="Donate with PayPal button" />
+            </a>
+            <a href="https://www.patreon.com/bePatron?u=13678963" target="_blank" class="column is-1">
+                <svg width="15" height="15" viewBox="0 0 569 546">
+                    <g>
+                        <circle data-fill="1" id="Oval" cx="362" cy="204" r="204"></circle>
+                        <rect data-fill="2" id="Rectangle" x="0" y="0" width="100" height="545"></rect>
+                    </g>
+                </svg> Patron
+            </a>
+            <div class="column is-4"></div>
         </div>
+    </section><br><br>
+    <footer class="footer has-background-grey-dark has-text-white">
+        <div class="content has-text-centered has-text-white">
+            <strong class="has-text-white">This blog is made by</strong> <a href="https://codingotaku.com">Coding
+                Otaku</a>. The source code is
+            licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        </div>
+        <a rel="me" href="https://fosstodon.org/@CodingOtaku"></a>
     </footer>
     <script src="/scripts/navbar.js" type="module" charset="utf-8"></script>
 </body>

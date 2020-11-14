@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="/icons/logo-with-bg.svg">
     <title>Migrating to FLOSS</title>
     <link rel="stylesheet" href="/styles/bulma.min.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <style>
         @media screen and (max-width: 1024px) {
 
@@ -56,50 +57,48 @@
 
 <body>
     <section class="section">
-        <nav class="navbar is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="/">
-                    <img src="/icons/logo.png">
-                </a>
-
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbar-Coding Otaku">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-
-            <div id="navbar-Coding Otaku" class="navbar-menu">
-                <div class="navbar-start" id="navbar"></div>
-            </div>
-        </nav>
-        <noscript>
-            <div class="message is-success">
-                <div class="message-header">
-                    Please enable JavaScript to navigate.
-                </div>
-                <div class="message-body">
-                    This page is auto-generated and does <strong>not</strong> contain any form of telemetry or ads.<br>
-                    JavaScript is required to navigate through header and to list blogs.<br>
-                    Complete source code for this site can be found at <strong><a
-                            href="https://github.com/CodingOtaku/Blog"
-                            target="_blank">https://github.com/CodingOtaku/Blog</a></strong>.
-                </div>
-            </div>
-        </noscript>
+      <nav class="navbar is-dark is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            Home
+          </a>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+            data-target="navbar-Coding Otaku">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+  
+        <div id="navbar-Coding Otaku" class="navbar-menu">
+          <div class="navbar-end" id="navbar"></div>
+        </div>
+      </nav>
+      <noscript>
+        <div class="message is-success">
+          <div class="message-header">
+            Please enable JavaScript to navigate.
+          </div>
+          <div class="message-body">
+            This page is auto-generated and does <strong class=" has-text-white">not</strong> contain any form of telemetry or ads.<br>
+            JavaScript is required to navigate through header and to list blogs.<br>
+            Complete source code for this site can be found at <strong class=" has-text-white"><a href="https://github.com/CodingOtaku/Blog"
+                target="_blank">https://github.com/CodingOtaku/Blog</a></strong>.
+          </div>
+        </div>
+      </noscript>
     </section>
     <section class="hero is-dark">
         <div class="hero-body">
             <div class="container">
-                <h1 class="title">Migrating To FLOSS!</h1>
+                <h1 class="title has-text-white">Migrating To FLOSS!</h1>
                 <h2 class="subtitle">A few alternatives to the privacy hogging softwares you use.</h2>
                 - Created on <time datetime="2020-07-23">23<sup>rd</sup> July 2020 </time>
             </div>
         </div>
     </section><br>
     <section>
-        <div class="container box">
+        <div class="container box has-background-grey-dark has-text-white">
             <div class="notification is-danger">
                 This list is not complete.<br>
                 Please do note that just migrating to the alternatives mentioned in this
@@ -135,10 +134,10 @@
             provide you a false sense of privacy and security. This is why you should always choose apps and services
             which you can read the source code and lets you modify them.<br><br>
             <div class="box notification is-primary">
-                <strong>The best way to enforce privacy is to collect no data at all.</strong>
+                <strong class=" has-text-white">The best way to enforce privacy is to collect no data at all.</strong>
             </div>
             <br>
-            <h1 class="title">Alternatives</h1>
+            <h1 class="title has-text-white">Alternatives</h1>
             <h2 class="subtitle">This will soon become a long list, so I have tried to optimize this page as much as I can for your
                 convenience.</h2>
             <i class="has-text-danger subtitle">
@@ -148,11 +147,11 @@
                 It would also be better if you could click through all the links we provided for more detailed
                 information.
             </i><br><br>
-            <table class="table is-fullwidth">
+            <table class="table is-fullwidth has-background-grey-dark has-text-white">
                 <thead>
                     <th class="has-text-danger">Avoid</th>
                     <th class="has-text-success">Use</th>
-                    <th>Reason</th>
+                    <th class="has-text-white">Reason</th>
                 </thead>
                 <tbody>
                     <tr>
@@ -172,7 +171,7 @@
                             </span>
                             GNU/Linux</a>
                         </td>
-                        <td><button class="button" onclick="launch('os_desktop')">Know More...</button></td>
+                        <td><button class="button is-dark" onclick="launch('os_desktop')">Know More...</button></td>
                     </tr>
                     <tr>
                         <td colspan="3" class="hide">
@@ -195,7 +194,7 @@
                                 class="has-text-success">Other AOSP based operating system for
                                 Android</a>
                         </td>
-                        <td><button class="button" onclick="launch('os_mobile')">Know More...</button></td>
+                        <td><button class="button is-dark" onclick="launch('os_mobile')">Know More...</button></td>
                     </tr>
                     <tr>
                         <td colspan="3" class="hide">
@@ -218,7 +217,7 @@
                                 </span>
                             </a>
                         </td>
-                        <td><button class="button" onclick="launch('store_mobile')">Know More...</button></td>
+                        <td><button class="button is-dark" onclick="launch('store_mobile')">Know More...</button></td>
                     </tr>
                     <tr>
                         <td colspan="3" class="hide">
@@ -243,7 +242,7 @@
                             <a href="https://www.mozilla.org/en-US/firefox/mobile/" class="has-text-success"
                                 target="_blank">Firefox Mobile
                         </td>
-                        <td><button class="button" onclick="launch('browser_mobile')">Know More...</button></td>
+                        <td><button class="button is-dark" onclick="launch('browser_mobile')">Know More...</button></td>
                     </tr>
                     <tr>
                         <td colspan="3" class="hide">
@@ -264,7 +263,7 @@
                                 target="_blank">Telegram FOSS
                             </a>
                         </td>
-                        <td><button class="button" onclick="launch('communication_mobile')">Know More...</button></td>
+                        <td><button class="button is-dark" onclick="launch('communication_mobile')">Know More...</button></td>
                     </tr>
                     <tr>
                         <td colspan="3" class="hide">
@@ -279,7 +278,7 @@
                             <a href="https://diasporafoundation.org/" class="has-text-success"
                                 target="_blank">Diaspora</a>
                         </td>
-                        <td><button class="button" onclick="launch('social_mobile')">Know More...</button></td>
+                        <td><button class="button is-dark" onclick="launch('social_mobile')">Know More...</button></td>
                     </tr>
                     <tr>
                         <td colspan="3" class="hide">
@@ -294,25 +293,23 @@
     </section>
     <br><br>
     <section>
-        <div class="container box">
+        <div class="container box has-background-grey-dark has-text-white">
             <div id="isso-thread"></div>
         </div>
     </section>
     <br><br>
-    <footer class="footer">
-        <div class="content has-text-centered">
-            <p>
-                <strong>This blog is made by</strong> <a href="https://codingotaku.com">Coding Otaku</a>. The source
-                code is
-                licensed
-                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-            </p>
-        </div>
+    <footer class="footer has-background-grey-dark has-text-white">
+      <div class="content has-text-centered has-text-white">
+          <strong class="has-text-white">This blog is made by</strong> <a href="https://codingotaku.com">Coding Otaku</a>. The source code is
+          licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+      </div>
+      <a rel="me" href="https://fosstodon.org/@CodingOtaku"></a>
     </footer>
-    <!-- <script data-isso="https://comments.codingotaku.com/codingotaku/"
+    <script data-isso="https://comments.codingotaku.com/codingotaku/"
         src="https://comments.codingotaku.com/codingotaku/js/embed.min.js"></script>
-    <script src="/scripts/navbar.js" type="module" charset="utf-8"></script> -->
+    <script src="/scripts/navbar.js" type="module" charset="utf-8"></script>
     <script>
         function launch(page) {
             const frame = document.getElementById(page);

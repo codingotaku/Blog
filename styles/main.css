@@ -1,0 +1,7 @@
+html, body {
+    background-color: #363636;
+}
+
+.item:hover {
+    background-color: #222222;
+}

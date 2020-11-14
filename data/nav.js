@@ -1,9 +1,5 @@
 export const nav = [
   {
-    name: 'Home',
-    url: '/'
-  },
-  {
     name: 'Coding Otaku',
     url: 'https://codingotaku.com',
     isNewTab: true

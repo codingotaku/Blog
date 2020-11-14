@@ -50,7 +50,7 @@ function generateCard(item, listHolder) {
         listHolder.push(columns);
     }
     let columns = listHolder[listHolder.length - 1];
-    const mediaContainer = createElement("a", ["box", "column", "is-4"]);;
+    const mediaContainer = createElement("a", ["box has-background-grey-dark has-text-white", "column", "is-4"]);;
     const data = createElement("div", []);
     const img = createElement("img", ['box']);
     img.alt = item.name + " thumbnail";
