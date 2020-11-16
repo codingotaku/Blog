@@ -6,11 +6,26 @@ body {
     background-color: #363636;
 }
 
-/* Mobile view customizations */
-@media screen and (max-width: 728px) {
+.columns a:hover { 
+    color: white;
+}
 
+.columns a:nth-child(2) {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.columns a:last-child {
+    margin-bottom: 1.5em;
+}
+
+/* Mobile view customizations */
+@media screen and (max-width: 768px) {
     .columns a {
         width: 100% !important;
+    }
+    .columns a:nth-child(2) {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -25,7 +40,12 @@ body {
     .columns a {
         width: 30%;
     }
-
+    .columns a:last-child {
+        margin-bottom: 0;
+    }
+    .columns a:last-child {
+        margin-bottom: 1.5em;
+    }
     /* Bulma bug workaround remove end*/
 
     /* show mavbar-menu on screen less than 1024px */
@@ -60,3 +80,4 @@ body {
 .item:hover {
     background-color: #222222;
 }
+
